@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Update user details</h1>
+    <form action="update" class="form p-2 m-3" method="post">
+        {% csrf_token %}
+        <input type="text" name="roll" placeholder="Roll Number" class="form-control m-3" required>
+        <input type="text" name="fname" class="form-control m-3" placeholder="First Name" required>
+        <input type="text" name="lname" class="form-control m-3" placeholder="Last Name" required>
+        <input type="text" name="phone" class="form-control m-3" placeholder="Phone">
+        <input type="email" name="email" class="form-control m-3" placeholder="Email" required>
+        <input type="date" name="dob" class="form-control m-3" placeholder="Date of Birth" required>
+        <input type="submit" class="form-control btn btn-success m-3" value="Update">
+    </form>
+</div>
+
+
+{% endblock %}
